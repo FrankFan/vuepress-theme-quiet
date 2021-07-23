@@ -1,0 +1,31 @@
+{
+  "name": "vuepress-theme-quiet",
+  "version": "0.1.0",
+  "description": "",
+  "main": "theme/index.js",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "vuepress dev example",
+    "debug": "vuepress dev example --debug",
+    "build": "vuepress build example"
+  },
+  "keywords": [
+    "vuepress",
+    "blog",
+    "theme",
+    "quiet"
+  ],
+  "files": [
+    "theme/"
+  ],
+  "author": "FrankFan",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.8.2",
+    "@vuepress/plugin-blog": "^1.9.4",
+    "@vuepress/plugin-medium-zoom": "^1.8.2",
+    "vuepress": "^1.8.2",
+    "vuepress-plugin-smooth-scroll": "^0.0.3",
+    "vuepress-plugin-table-of-contents": "^1.1.7"
+  }
+}
