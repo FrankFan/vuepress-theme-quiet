@@ -20,6 +20,15 @@ module.exports = {
       },
     ],
     copyright: `© vuepress-theme-quiet ${new Date().getFullYear()} ❤️🧡💚💛💜💙`,
+    additionalPages: [
+      {
+        path: '/about/',
+        filePath: path.resolve(__dirname, '../about/README.md'),
+        frontmatter: {
+          layout: 'Post',
+        },
+      },
+    ],
   },
 
   configureWebpack: {

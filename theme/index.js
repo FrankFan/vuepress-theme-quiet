@@ -11,6 +11,13 @@ const blogPluginConfig = {
         lengthPerPage: 20,
       },
     },
+    // {
+    //   id: 'about',
+    //   dirname: 'about',
+    //   path: '/about/me',
+    //   layout: 'Post',
+    //   // itemPermalink: '/:regular',
+    // },
   ],
   frontmatters: [
     {
@@ -82,38 +89,38 @@ const containerPlugin = [
   ],
 ];
 
-module.exports = {
-  name: 'vuepress-theme-quiet',
-  plugins: [
-    ['@vuepress/blog', blogPluginConfig],
+// Theme API.
+module.exports = (options, ctx) => {
+  const { themeConfig, siteConfig } = ctx;
+  const { additionalPages = [] } = themeConfig;
 
-    [
-      '@vuepress/medium-zoom',
+  return {
+    name: 'vuepress-theme-quiet',
+    plugins: [
+      ['@vuepress/blog', blogPluginConfig],
+
+      [
+        '@vuepress/medium-zoom',
+        {
+          selector: '.content__default img',
+        },
+      ],
+
+      ...containerPlugin,
+
+      'vuepress-plugin-smooth-scroll',
+      '@vuepress/back-to-top',
+      'vuepress-plugin-table-of-contents',
+    ],
+    additionalPages: [
+      ...additionalPages,
       {
-        selector: '.content__default img',
+        path: '/archives/',
+        frontmatter: {
+          title: 'Archive',
+          layout: 'Archive',
+        },
       },
     ],
-
-    ...containerPlugin,
-
-    'vuepress-plugin-smooth-scroll',
-    '@vuepress/back-to-top',
-    'vuepress-plugin-table-of-contents',
-  ],
-  additionalPages: [
-    {
-      path: '/about/',
-      filePath: path.resolve(__dirname, '../example/about/README.md'),
-      frontmatter: {
-        layout: 'Post',
-      },
-    },
-    {
-      path: '/archives/',
-      frontmatter: {
-        title: 'Archive',
-        layout: 'Archive',
-      },
-    },
-  ],
+  };
 };
