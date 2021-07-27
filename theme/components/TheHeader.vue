@@ -4,7 +4,7 @@
       <img src="../assets/imgs/vue.png" alt />
       <h1>logo</h1>
     </router-link>
-    <nav>
+    <nav v-if="navList">
       <NavLink v-for="nav in navList" :item="nav" />
     </nav>
   </header>
@@ -19,7 +19,7 @@ export default {
   },
   computed: {
     navList() {
-      return this.$themeConfig.nav.map(item => {
+      return this.$themeConfig.nav && this.$themeConfig.nav.map(item => {
         return {
           text: item.text,
           link: item.link,

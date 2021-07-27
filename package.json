@@ -9,6 +9,14 @@
     "debug": "vuepress dev example --debug",
     "build": "vuepress build example"
   },
+  "homepage": "https://github.com/FrankFan/vuepress-theme-quiet",
+  "bugs": {
+    "url": "https://github.com/FrankFan/vuepress-theme-quiet/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FrankFan/vuepress-theme-quiet.git"
+  },
   "keywords": [
     "vuepress",
     "blog",
@@ -27,5 +35,6 @@
     "vuepress": "^1.8.2",
     "vuepress-plugin-smooth-scroll": "^0.0.3",
     "vuepress-plugin-table-of-contents": "^1.1.7"
-  }
+  },
+  "dependencies": {}
 }
