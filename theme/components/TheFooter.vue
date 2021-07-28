@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <span>{{ $themeConfig.copyright }}</span>
-    <p>layout: {{ layout }}</p>
+    <!-- <p>layout: {{ layout }}</p> -->
   </footer>
 </template>
 

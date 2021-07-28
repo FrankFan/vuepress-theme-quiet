@@ -1,5 +1,7 @@
 # vuepress-theme-quiet
 
+[![NPM](https://nodei.co/npm/vuepress-theme-quiet.png)](https://npmjs.org/package/vuepress-theme-quiet)
+
 a vuepress blog theme, makes you feel quiet.
 
 ## preview
