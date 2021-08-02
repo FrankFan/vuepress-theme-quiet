@@ -39,5 +39,4 @@ export default {
 .tag-item
   .list-wrapper
     padding-top 30px
-    line-height 4em
 </style>

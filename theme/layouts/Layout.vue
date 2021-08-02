@@ -38,5 +38,5 @@ export default {
   &__children
     padding-left 40px
     .post-item
-      padding-bottom 30px
+      /* padding-bottom 30px */
 </style>

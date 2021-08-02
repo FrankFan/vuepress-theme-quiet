@@ -8,16 +8,17 @@
     </div>
     <p class="date" v-if="$frontmatter.date">{{ new Date($frontmatter.date).toLocaleDateString() }}</p>
     <Content class="post-content" />
+    <PostNav />
   </div>
 </template>
 
 <script>
-// import BackIcon from '../components/BackIcon';
+import PostNav from '../components/PostNav';
 
 export default {
   name: 'Post',
   components: {
-    // BackIcon,
+    PostNav,
   }
 }
 </script>

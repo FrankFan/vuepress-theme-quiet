@@ -57,22 +57,20 @@ export default {
 
 .theme-tags
   &_container
-    padding-top 20px
-  .theme-tag
-    display inline-block
-    color $textColor
-    border 1px solid $textColor
-    padding 4px 10px
-    margin 0 20px 10px 0
-    border-radius 5px
-    &:last-child
-      margin-right 0
-    &:hover
-      color $linkColor
-      border 1px solid $linkColor
-      box-shadow 0 0 5px $linkColor
+    .theme-tag
+      display inline-block
+      color $textColor
+      border 1px solid $textColor
+      padding 4px 10px
+      margin 0 20px 10px 0
+      border-radius 5px
+      &:last-child
+        margin-right 0
+      &:hover
+        color $linkColor
+        border 1px solid $linkColor
+        box-shadow 0 0 5px $linkColor
 
   .list-wrapper
     padding-top 10px
-    line-height 3.5em
 </style>

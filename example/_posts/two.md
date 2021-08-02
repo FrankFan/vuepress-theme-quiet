@@ -1,6 +1,6 @@
 ---
 date: 2021-07-09
-title: two 第二篇
+title: 第二篇文章
 tags:
   - vue
   - course
