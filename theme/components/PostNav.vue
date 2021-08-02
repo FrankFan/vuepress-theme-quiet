@@ -1,7 +1,11 @@
 <template>
   <div class="post-nav">
     <router-link v-if="prevPost" class="post-nav__prev" :to="prevPost.path">{{ prevPost.title }}</router-link>
-    <router-link v-if="nextPost" class="post-nav__next" :to="nextPost.path">{{ nextPost.title }}</router-link>
+    <router-link
+      v-if="nextPost.title"
+      class="post-nav__next"
+      :to="nextPost.path"
+    >{{ nextPost.title }}</router-link>
   </div>
 </template>
 

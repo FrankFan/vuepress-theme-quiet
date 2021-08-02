@@ -1,24 +1,25 @@
 <template>
   <div class="post">
-    <!-- TODO -->
-    <!-- <TOC class="toc" :include-level="[2, 3]" /> -->
+    <TOC class="toc" :include-level="[2, 3]" />
     <div class="title-wrapper">
-      <!-- <BackIcon /> -->
       <p class="title">{{ $page.title }}</p>
     </div>
     <p class="date" v-if="$frontmatter.date">{{ new Date($frontmatter.date).toLocaleDateString() }}</p>
     <Content class="post-content" />
     <PostNav />
+    <!-- <Comment /> -->
   </div>
 </template>
 
 <script>
+// import { Comment } from '@vuepress/plugin-blog/lib/client/components'
 import PostNav from '../components/PostNav';
 
 export default {
   name: 'Post',
   components: {
     PostNav,
+    // Comment,
   }
 }
 </script>
@@ -31,12 +32,23 @@ export default {
 
   .toc
     position fixed
-    right 220px
-    /* border 1px solid red */
-    ul
+    width 250px
+    right 60px
+    top 100px
+    background-color #eee
+    border-radius 5px
+    a
+      color $textColor
+      &:hover
+        color $linkColor
+    > ul
+      list-style none
+      padding 10px
       li
+        line-height 1.8em
         ul
-          margin-left 2em
+          list-style none
+          margin-left 1.5em
 
   p
     margin-bottom 20px

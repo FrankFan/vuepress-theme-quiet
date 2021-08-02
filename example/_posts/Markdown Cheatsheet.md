@@ -9,7 +9,7 @@ date: 2020-02-21
 
 123123
 
-## H2 中有 Link [我是链接 baidu.com](http://www.baidu.com)
+## H2 中有 Link [我是链接](http://www.baidu.com)
 
 [cache-control](https://www.meteorlxy.cn/posts/2018/05/12/http-caching.html#cache-control-header)
 
